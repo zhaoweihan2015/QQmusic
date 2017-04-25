@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://127.0.0.1:8080/QQ%20music%20in%20web/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#31c27c">
+		<meta name="format-detection" content="telphone=no, email=no">
+		<title></title>
+		<style type="text/css">
+			body,
+			ul,
+			p {
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+			}
+			
+			* {
+				text-decoration: none;
+				font-family: "微软雅黑";
+			}
+			
+			header,
+			footer {
+				position: fixed;
+				width: 100%;
+				z-index: 99;
+			}
+			
+			@media screen and (min-height:1920px) and (min-width: 1080px) {
+				html,
+				input {
+					font-size: 50px;
+				}
+			}
+			
+			header,
+			footer,
+			header>ul>a {
+				height: 3rem;
+				line-height: 3rem;
+			}
+			
+			article {
+				padding-top: 5rem;
+			}
+			
+			.search {
+				height: 2em;
+			}
+			
+			header {
+				background: #31c27c;
+			}
+			
+			footer {
+				bottom: 0px;
+				border-top: 1px solid #E0E0E0;
+				background: white;
+			}
+			
+			header>ul {
+				position: absolute;
+				width: 50%;
+				left: 25%;
+			}
+			
+			header>ul>li {
+				width: 33.3%;
+				height: 100%;
+				float: left;
+				text-align: center;
+			}
+			
+			header>ul>li>a {
+				color: #ebf9f2;
+				font-weight: normal;
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+			
+			header>ul>li>a:hover {
+				font-weight: bold;
+			}
+			
+			article {
+				width: 100%;
+				height: auto;
+				float: left;
+				background: #f4f4f4;
+			}
+			/*Search*/
+			
+			.search {
+				width: 100%;
+				float: left;
+				background: #31C27C;
+				position: fixed;
+				top: 3rem;
+				z-index: 99;
+			}
+			
+			#searchWord,
+			.search>input {
+				font-size: .8rem;
+				color: white;
+			}
+			
+			.search>input {
+				height: 80%;
+				width: 92%;
+				margin: 0px 2%;
+				border: 0px;
+				border-radius: 10px;
+				background: #2caf70;
+				padding: 0px 2%;
+			}
+			
+			#searchWord {
+				top: -80%;
+				position: relative;
+				width: 3.2em;
+				height: 80%;
+				left: 50%;
+				margin-left: -1.6em;
+				margin-top: 1%;
+			}
+			
+			#searchWord>.searchIcon {
+				margin: 5% 4% 0 0;
+				width: .8rem;
+				height: .8rem;
+				float: left;
+				background: url(img/searchIcon.jpg) .9rem .9rem;
+			}
+			/*Menu*/
+			
+			.HeadImg {
+				height: 3rem;
+			}
+			
+			.HeadImg>ul {
+				width: 15rem;
+				margin: 0 auto;
+				height: 100%;
+			}
+			
+			.HeadImg>ul>li {
+				height: 100%;
+				width: 5rem;
+				float: left;
+				overflow: hidden;
+			}
+			
+			.HeadIn {
+				height: 1.4rem;
+				width: 4.6rem;
+				border: 0.06rem solid #969696;
+				border-radius: .7rem;
+				margin-top: .8rem;
+			}
+			
+			.HeadIn>img {
+				width: 1.4rem;
+				height: 1.4rem;
+				float: left;
+				margin-left: .5rem;
+				margin-right: .2rem;
+			}
+			
+			.HeadIn>span {
+				color: #969696;
+				font-size: 0.8rem;
+			}
+			
+			.HeadShow {
+				height: 3rem;
+				width: 3rem;
+				margin: 0 auto;
+				background: black;
+				/*记得改*/
+				border-radius: 1.5rem;
+			}
+			
+			.name {
+				text-align: center;
+				height: 1rem;
+				margin-top: 1rem;
+			}
+			
+			.Diamond {
+				height: 1.1rem;
+				text-align: center;
+				margin: .2rem 0px;
+				padding: 0px;
+			}
+			
+			.Head {
+				width: 100%;
+				padding-top: 1rem;
+				margin-bottom: .5rem;
+				height: auto;
+				float: left;
+				background: white;
+			}
+			
+			.Head>div {
+				float: left;
+				width: 100%;
+			}
+			
+			.HeadBox {
+				height: 10.4rem;
+			}
+			
+			.HeadBox>ul>li {
+				height: 5.2rem;
+				width: 33.33%;
+				text-align: center;
+				float: left;
+			}
+			
+			.HeadBox>ul>li>div {
+				height: 2.8rem;
+				width: 2.8rem;
+				margin: 0 auto;
+			}
+			
+			.HeadBox>ul>li>a {
+				width: 100%;
+				height: 1rem;
+				font-size: .8rem;
+				line-height: 1rem;
+				color: black;
+			}
+			
+			.HeadBox>ul>li>span {
+				display: block;
+				color: #969696;
+				font-size: .7rem;
+			}
+			
+			.HeadBox>ul>li:first-child>div {
+				background: url(img/Box1.jpg) 2.8rem 2.8rem;
+			}
+			
+			.HeadBox>ul>li:nth-child(2)>div {
+				background: url(img/Box2.jpg) 2.8rem 2.8rem;
+			}
+			
+			.HeadBox>ul>li:nth-child(3)>div {
+				background: url(img/Box3.jpg) 2.8rem 2.8rem;
+			}
+			
+			.HeadBox>ul>li:nth-child(4)>div {
+				background: url(img/Box4.jpg) 2.8rem 2.8rem;
+			}
+			
+			.HeadBox>ul>li:nth-child(5)>div {
+				background: url(img/Box5.jpg) 2.8rem 2.8rem;
+			}
+			
+			.HeadBox>ul>li:nth-child(6)>div {
+				background: url(img/Box6.jpg) 2.8rem 2.8rem;
+			}
+			
+			.action {
+				height: .6rem;
+				width: .6rem;
+				background: #fc4c24;
+				position: relative;
+				border-radius: .4rem;
+				top: -5rem;
+				left: 4.5rem;
+			}
+			/*Radio List*/
+			
+			.List {
+				padding-bottom: 4rem;
+			}
+			
+			.Radio,
+			.List {
+				width: 100%;
+				float: left;
+				height: auto;
+				background: white;
+				margin-bottom: .5rem;
+			}
+			
+			.Radio>ul>li,
+			.List>ul>li {
+				height: 3.6rem;
+				float: left;
+				width: 100%;
+				overflow: hidden;
+				border-bottom: 1px solid #e0e0e0;
+			}
+			
+			.Radio>ul>li>div,
+			.List>ul>li>div {
+				height: 3.6rem;
+				width: 3.6rem;
+				float: left;
+			}
+			
+			.Radio>ul>li>div>img,
+			.List>ul>li>div>img {
+				height: 3.6rem;
+				width: 3.6rem;
+			}
+			
+			.Radio>ul>li>div>p {
+				height: 3.6rem;
+				width: 3.6rem;
+				position: absolute;
+				left: 0px;
+				z-index: 5;
+				opacity: .5;
+			}
+			
+			.play {
+				background: url(img/radio1.jpg);
+			}
+			
+			.running {
+				background: url(img/radio2.jpg);
+			}
+			
+			.Radio>ul>li>a,
+			.List>ul>li>a {
+				display: block;
+				height: 2.8rem;
+				font-size: .8rem;
+				color: black;
+				float: left;
+				margin-left: .6rem;
+				line-height: 1rem;
+				padding-top: .8rem;
+			}
+			
+			.Radio>ul>li>a>span,
+			.List>ul>li>a>span {
+				display: block;
+				width: 100%;
+				font-size: .6rem;
+				color: #969696;
+			}
+			
+			.Title {
+				height: 2.6rem;
+				float: left;
+				width: 100%;
+				text-align: center;
+				letter-spacing: .4rem;
+				line-height: 2.6rem;
+			}
+			
+			.Title>a {
+				height: 2.6rem;
+				width: 2.4rem;
+				background: url(img/icon1.jpg);
+				position: absolute;
+				right: 0px;
+			}
+			
+			.menu,
+			.own {
+				position: absolute;
+				height: 2.5rem;
+				width: 2.5rem;
+				margin-top: .5rem;
+			}
+			
+			.menu {
+				left: 0px;
+				background: url(img/menu.jpg);
+			}
+			
+			.own {
+				background: url(img/ownjpg.jpg);
+				right: 0px;
+			}
+			
+			.Enter {
+				height: 2.5rem;
+				width: 1.5rem;
+				position: absolute;
+				background: url(img/enter.jpg) no-repeat;
+				right: 0px;
+			}
+			footer>ul>li {
+						float: left;
+						height: 3rem;
+					}
+					
+					#Play {
+						float: right;
+						width: 3rem;
+						background: url(img/botton.jpg);
+					}
+					
+					#MusicList {
+						float: right;
+						width: 3rem;
+						background: url(img/botton.jpg) -3rem;
+					}
+					
+					#Pic {
+						width: 3rem;
+						background: url(img/musicPic.jpg);
+					}
+					
+					.RealPic {
+						height: 2rem;
+						width: 2rem;
+						border-radius: 1rem;
+						/*background: black;*/
+						margin: .5rem;
+					}
+					.MusicＮame>a{
+						padding-top: .5rem;
+						height: 2.5rem;
+						line-height: 1rem;
+						font-size: .8rem;
+						float: left;
+					}
+					.MusicＮame>a>span{
+						line-height: .6rem;
+						font-size: .6rem;
+						color: #2CAF70;
+					}
+					.mainBox{
+						width: 100%;
+						height: auto;
+						float: left;
+						position: absolute;
+					}
+					aside{
+						width: 80%;
+						height: 100%;
+						background: gray;
+				        z-index: 999;
+				        position: fixed;
+				        left: 0px;
+				        top: 0px;
+				        transition: transform 1s;
+				        transform: translateX(-100%);
+					}
+					.active{
+						transform: translateX(0);
+					}
+		</style>
+	</head>
+
+	<body>
+		<aside></aside>
+		<div class="mainBox">
+		<header>
+			<div class="menu"></div>
+			<div class="own"></div>
+			<ul>
+				<li>
+					<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">我的</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">音乐馆</a>
+				</li>
+				<li>
+					<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">发现</a>
+				</li>
+			</ul>
+		</header>
+		<article>
+			<!--Search-->
+			<div class="search">
+				<input type="text" value="">
+				<div id="searchWord"><i class="searchIcon"></i>搜索</div>
+			</div>
+			<!--Menu-->
+			<div class="Head">
+				<!--HeadImg-->
+				<div class="HeadImg">
+					<ul>
+						<li>
+							<div class="HeadIn hleft"><img src="./index_files/hleft.jpg" alt=""><span>0分钟</span></div>
+						</li>
+						<li>
+							<div class="HeadShow"><img src="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html"></div>
+						</li>
+						<li>
+							<div class="HeadIn hright"><img src="./index_files/hright.jpg" alt=""><span>开通</span></div>
+						</li>
+					</ul>
+				</div>
+				<!--Name-->
+				<div class="name">
+					— Your Name —
+				</div>
+				<!--Diamonds-->
+				<div class="Diamond">
+					<img src="./index_files/Diamonds.jpg" alt="">
+				</div>
+				<div class="HeadBox">
+					<ul>
+						<li>
+							<div></div>
+							<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">本地歌曲</a>
+							<span>450</span>
+							<p class="action"></p>
+						</li>
+						<li>
+							<div></div>
+							<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">下载歌曲</a>
+						</li>
+						<li>
+							<div></div>
+							<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">最近播放</a>
+						</li>
+						<li>
+							<div></div>
+							<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">我喜欢</a>
+						</li>
+						<li>
+							<div></div>
+							<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">下载MV</a>
+						</li>
+						<li>
+							<div></div>
+							<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">已购音乐</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--radio station-->
+			<div class="Radio">
+				<ul>
+					<li>
+						<div>
+							<p class="play"></p>
+							<img src="./index_files/timg.jpg" alt="">
+						</div>
+						<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">
+							个性电台
+							<span>偶遇身边好音乐</span>
+						</a>
+					</li>
+					<li>
+						<div>
+							<p class="running"></p>
+							<img src="./index_files/timg2.jpg" alt="">
+						</div>
+						<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">
+							NIKE跑步电台
+							<span>新增万首跑步歌曲，点燃你的2017！</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--List-->
+			<div class="List">
+				<div class="Title">
+					我的歌单1
+					<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html"></a>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<img src="./index_files/timg3.jpg" alt="">
+						</div>
+						<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">
+							默认列表
+							<span>2首</span>
+						</a>
+						<p class="Enter"></p>
+					</li>
+					<li>
+						<div>
+							<img src="./index_files/timg4.jpg" alt="">
+						</div>
+						<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">
+							老歌曲
+							<span>12首</span>
+						</a>
+						<p class="Enter"></p>
+					</li>
+					<li>
+						<div>
+							<img src="./index_files/timg5.jpg" alt="">
+						</div>
+						<a href="http://127.0.0.1:8080/QQ%20music%20in%20web/index.html">
+							流行音乐
+							<span>22首</span>
+						</a>
+						<p class="Enter"></p>
+					</li>
+				</ul>
+			</div>
+		</article>
+		</div>
+		<footer>
+			<ul>
+				<li id="Pic">
+					<div class="RealPic"></div>
+				</li>
+				<li class="MusicＮame">
+					<a>Music Name <br><span>左右横滑可切换上下首</span></a>
+				</li>
+				<li id="MusicList"></li>
+				<li id="Play"></li>
+			</ul>
+		</footer>
+	
+
+</body></html>

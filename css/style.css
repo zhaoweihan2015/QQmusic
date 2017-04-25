@@ -1,0 +1,592 @@
+body,
+ul,
+p {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+body {
+	height: 100%;
+}
+
+hr {
+	margin: 0px;
+	border: #E0E0E0 1px solid;
+}
+
+span {
+	width: 100%;
+	display: block;
+	font-size: .6rem;
+	color: #969696;
+}
+
+* {
+	text-decoration: none;
+	font-family: "微软雅黑";
+}
+
+header,
+footer {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+}
+
+
+/*@media screen and (min-height:1600px) and (min-width: 1080px) {
+				html,
+				input {
+					font-size: 50px;
+				}
+			}
+			@media screen and (max-width:1080px) and (min-width:768px) {
+				html,
+				input {
+					font-size: 40px;
+				}
+			}
+			@media screen and (max-width:768px) and (min-width:600px) {
+				html,
+				input {
+					font-size: 30px;
+				}
+			}
+			@media screen and (max-width:600px) {
+				html,
+				input {
+					font-size: 20px;
+				}
+			}*/
+
+header,
+footer,
+header>ul>a {
+	height: 3rem;
+	line-height: 3rem;
+}
+
+article {
+	padding-top: 5rem;
+}
+
+.search {
+	height: 2em;
+}
+
+header {
+	background: #31c27c;
+}
+
+footer {
+	bottom: 0px;
+	border-top: 1px solid #E0E0E0;
+	background: white;
+}
+
+header>ul {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+}
+
+header>ul>li {
+	width: 33.3%;
+	height: 100%;
+	float: left;
+	text-align: center;
+}
+
+header>ul>li>a {
+	color: #ebf9f2;
+	font-weight: normal;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+header>ul>li>a:hover {
+	font-weight: bold;
+}
+
+article {
+	width: 100%;
+	height: auto;
+	float: left;
+	background: #f4f4f4;
+}
+
+
+/*Search*/
+
+.search {
+	width: 100%;
+	float: left;
+	background: #31C27C;
+	position: fixed;
+	top: 3rem;
+	z-index: 99;
+}
+
+#searchWord,
+.search>input {
+	font-size: .8rem;
+	color: white;
+}
+
+.search>input {
+	height: 80%;
+	width: 92%;
+	margin: 0px 2%;
+	border: 0px;
+	border-radius: 10px;
+	background: #2caf70;
+	padding: 0px 2%;
+}
+
+#searchWord {
+	top: -80%;
+	position: relative;
+	width: 3.2em;
+	height: 80%;
+	left: 50%;
+	margin-left: -1.6em;
+	margin-top: 1%;
+}
+
+#searchWord>.searchIcon {
+	margin: 5% 4% 0 0;
+	width: .8rem;
+	height: .8rem;
+	float: left;
+	background-size: .8rem;
+	background-image: url(../img/searchIcon.jpg);
+}
+
+
+/*Menu*/
+
+.HeadImg {
+	height: 3rem;
+}
+
+.HeadImg>ul {
+	width: 15rem;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.HeadImg>ul>li {
+	height: 100%;
+	width: 5rem;
+	float: left;
+	overflow: hidden;
+}
+
+.HeadIn {
+	height: 1.4rem;
+	width: 4.6rem;
+	border: 0.06rem solid #969696;
+	border-radius: .7rem;
+	margin-top: .8rem;
+}
+
+.HeadIn>img {
+	width: 1.4rem;
+	height: 1.4rem;
+	float: left;
+	margin-left: .5rem;
+	margin-right: .2rem;
+}
+
+.HeadIn>span {
+	display: inline;
+	font-size: 0.8rem;
+	line-height: 1.4rem;
+}
+
+.HeadShow {
+	height: 3rem;
+	width: 3rem;
+	margin: 0 auto;
+	background: black;
+	/*记得改*/
+	border-radius: 1.5rem;
+}
+
+.name {
+	text-align: center;
+	height: 1rem;
+	margin-top: 1rem;
+}
+
+.Diamond {
+	height: 1.1rem;
+	text-align: center;
+	margin: .2rem 0px;
+	padding: 0px;
+}
+
+.Diamond>img {
+	width: 1.1rem;
+}
+
+.Head {
+	width: 100%;
+	padding-top: 1rem;
+	margin-bottom: .5rem;
+	height: auto;
+	float: left;
+	background: white;
+}
+
+.Head>div {
+	float: left;
+	width: 100%;
+}
+
+.HeadBox {
+	height: 10.4rem;
+}
+
+.HeadBox>ul>li {
+	height: 5.2rem;
+	width: 33.33%;
+	text-align: center;
+	float: left;
+}
+
+.HeadBox>ul>li>div {
+	height: 2.8rem;
+	width: 2.8rem;
+	margin: 0 auto;
+	background-size: 2.8rem 2.8rem;
+}
+
+.HeadBox>ul>li>a {
+	width: 100%;
+	height: 1rem;
+	font-size: .8rem;
+	line-height: 1rem;
+	color: black;
+}
+
+.HeadBox>ul>li:first-child>div {
+	background-image: url(../img/Box1.jpg);
+}
+
+.HeadBox>ul>li:nth-child(2)>div {
+	background-image: url(../img/Box2.jpg);
+}
+
+.HeadBox>ul>li:nth-child(3)>div {
+	background-image: url(../img/Box3.jpg);
+}
+
+.HeadBox>ul>li:nth-child(4)>div {
+	background-image: url(../img/Box4.jpg);
+}
+
+.HeadBox>ul>li:nth-child(5)>div {
+	background-image: url(../img/Box5.jpg);
+}
+
+.HeadBox>ul>li:nth-child(6)>div {
+	background-image: url(../img/Box6.jpg);
+}
+
+.action {
+	height: .6rem;
+	width: .6rem;
+	background: #fc4c24;
+	position: relative;
+	border-radius: .4rem;
+	top: -5rem;
+	left: 4.5rem;
+}
+
+
+/*Radio List*/
+
+.List {
+	padding-bottom: 4rem;
+}
+
+.Radio,
+.List {
+	width: 100%;
+	float: left;
+	height: auto;
+	background: white;
+	margin-bottom: .5rem;
+}
+
+.Radio>ul>li,
+.List>ul>li {
+	height: 3.6rem;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.Radio>ul>li>div,
+.List>ul>li>div {
+	height: 3.6rem;
+	width: 3.6rem;
+	float: left;
+}
+
+.Radio>ul>li>div>img,
+.List>ul>li>div>img {
+	height: 3.6rem;
+	width: 3.6rem;
+}
+
+.Radio>ul>li>div>p {
+	height: 3.6rem;
+	width: 3.6rem;
+	position: absolute;
+	left: 0px;
+	z-index: 5;
+	opacity: .5;
+}
+
+.play,
+.running {
+	background-size: 100%;
+}
+
+.play {
+	background-image: url(../img/radio1.jpg);
+}
+
+.running {
+	background-image: url(../img/radio2.jpg);
+}
+.Radio>ul>li>a,
+.List>ul>li>a {
+	display: block;
+	height: 2.8rem;
+	font-size: .8rem;
+	color: black;
+	float: left;
+	margin-left: .6rem;
+	line-height: 1rem;
+	padding-top: .8rem;
+}
+
+.Title {
+	height: 2.6rem;
+	float: left;
+	width: 100%;
+	text-align: center;
+	letter-spacing: .4rem;
+	line-height: 2.6rem;
+}
+
+.Title>a {
+	height: 2.6rem;
+	width: 2.4rem;
+	background-size: 2.4rem 2.6rem;
+	background-image: url(../img/icon1.jpg);
+	position: absolute;
+	right: 0px;
+}
+/*head button*/
+.menu,
+.own {
+	position: absolute;
+	height: 2.5rem;
+	width: 2.5rem;
+	margin-top: .5rem;
+	background-size: 2.5rem;
+}
+
+.menu {
+	left: 0px;
+	background-image: url(../img/menu.jpg);
+}
+
+.own {
+	background-image: url(../img/ownjpg.jpg);
+	right: 0px;
+}
+
+.Enter {
+	height: 2.5rem;
+	width: 1.5rem;
+	position: absolute;
+	background: url(../img/enter.jpg) no-repeat;
+	right: 0px;
+}
+/*footer*/
+footer>ul>li {
+	float: left;
+	height: 3rem;
+}
+
+#Play,
+#MusicList {
+	float: right;
+	width: 3rem;
+	background-size: 3rem 3rem;
+}
+
+#Play {
+	background-image: url(../img/botton.jpg);
+}
+
+#MusicList {
+	background-image: url(../img/botton2.jpg);
+}
+
+#Pic {
+	width: 3rem;
+	background-size: 3.2rem 3rem;
+	background-image: url(../img/musicPic.jpg);
+}
+
+.RealPic {
+	height: 2rem;
+	width: 2rem;
+	border-radius: 1rem;
+	/*background: black;*/
+	margin: .5rem;
+}
+
+.MusicＮame>a {
+	padding-top: .5rem;
+	height: 2.5rem;
+	line-height: 1rem;
+	font-size: .8rem;
+	float: left;
+}
+
+#mainBox {
+	width: 100%;
+	height: auto;
+	float: left;
+	position: absolute;
+}
+
+aside {
+	width: 80%;
+	height: 100%;
+	background: white;
+	z-index: 990;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	transition: transform .5s;
+	transform: translateX(-100%);
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+aside>ul {
+	padding-bottom: 5rem;
+}
+
+aside>ul>li {
+	height: 2.4rem;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+aside>ul>li>a {
+	line-height: 2.4rem;
+	text-indent: 1.2rem;
+	font-size: .8rem;
+	width: 100%;
+	float: left;
+	color: black;
+}
+
+.active {
+	transform: translateX(0)!important;
+}
+
+#bgBlack {
+	width: 100%;
+	height: 100%;
+	z-index: 120;
+	background: black;
+	display: block;
+	position: fixed;
+	top: 0px;
+	opacity: .5;
+	display: none;
+}
+
+#aside_footer {
+	width: 80%;
+	height: 3rem;
+	position: fixed;
+	bottom: 0;
+	border-top: 1px solid #E0E0E0;
+	background: white;
+	z-index: 999;
+	transform: translateX(-100%);
+	transition: transform .5s;
+}
+
+#aside_footer>ul>li {
+	width: auto;
+	height: 3rem;
+	float: left;
+}
+
+#aside_footer>ul>li:first-child {
+	float: right;
+	padding-right: 1rem;
+}
+
+#aside_footer>ul>li>img {
+	float: left;
+	height: 3rem;
+	margin-left: .5rem;
+}
+
+#aside_footer>ul>li>a {
+	line-height: 3rem;
+	font-size: .8rem;
+	float: left;
+	display: block;
+	height: 3rem;
+}
+
+.asideHead {
+	width: 100%;
+	float: left;
+	height: 6.5em;
+	background: url(../img/asideBg.jpg) repeat-x;
+}
+
+.asideHead>ul>li {
+	width: 33.3%;
+	height: 7rem;
+	float: left;
+	padding-top: 1rem;
+	text-align: center;
+}
+
+.asideHead>ul>li>a {
+	height: 100%;
+	width: 100%;
+	display: block;
+	font-size: .7rem;
+}
+
+.asideHead>ul>li>a>div {
+	margin: 0 auto;
+	height: 2.8rem;
+	width: 3.6rem;
+}
+
+.asideHead>ul>li>a>div>img {
+	height: 2.8rem;
+	width: 3.6rem;
+}
